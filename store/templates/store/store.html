@@ -1,0 +1,231 @@
+{%extends 'store/main.html'%}
+{% load static %}
+{%block content%}
+
+<div class='row'>
+    {%for product in products%}
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{{product.imageURL}}">
+        <div class="box-element product">
+            <h6><strong>{{product.name}}</strong></h6>
+            <hr>
+            <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Ajouter</button>
+		    <a class="btn btn-outline-success" href="#">Voir l'article</a>
+		    <h4 style="display: inline-block; float: right"><strong>{{product.price|floatformat:2}}€</strong></h4>
+        </div>
+    </div>
+    {%endfor%}
+
+</div>
+{%endblock content%}
+
+<!-- <img src="{%static 'images/panier.jpg'%}"> -->
+{% comment %} 
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/tiramisu_choco.jpg'%}">
+    <div class="box-element product">
+        <h6><strong>Tiramisu chocolat</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>7€</strong></h4>
+    </div>
+</div>
+
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/tiramisu_fraise.jpeg'%}">
+    <div class="box-element product">
+        <h6><strong>Tiramisu fraise</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>8,50€</strong></h4>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+<h4><strong>Assortiment</strong></h4>
+<hr>
+
+
+
+<div class='row'>
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/keke_1.png'%}">
+    <div class="box-element product">
+        <h6><strong>Assortiment Cupcakes/Tiramisu</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>7€</strong></h4>
+    </div>
+</div>
+
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/keke_2.png'%}">
+    <div class="box-element product">
+        <h6><strong>Buche aux spéculoos</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>7€</strong></h4>
+    </div>
+</div>
+
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/keke_3.png'%}">
+    <div class="box-element product">
+        <h6><strong>Pastry</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>8,50€</strong></h4>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+<div class='row'>
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/keke_4.png'%}">
+    <div class="box-element product">
+        <h6><strong>Assortiment</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>7€</strong></h4>
+    </div>
+</div>
+
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/keke_5.png'%}">
+    <div class="box-element product">
+        <h6><strong>Assortiment</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>7€</strong></h4>
+    </div>
+</div>
+
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/keke_6.png'%}">
+    <div class="box-element product">
+        <h6><strong>Assortiment Fruits</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>8,50€</strong></h4>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+<hr>
+<h4><strong>Gateaux</strong></h4>
+<hr>
+
+
+<div class='row'>
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/gateau_1.png'%}">
+    <div class="box-element product">
+        <h6><strong>Name</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>7€</strong></h4>
+    </div>
+</div>
+
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/gateau_2.png'%}">
+    <div class="box-element product">
+        <h6><strong>Name</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>7€</strong></h4>
+    </div>
+</div>
+
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/gateau_3.png'%}">
+    <div class="box-element product">
+        <h6><strong>Name</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>8,50€</strong></h4>
+    </div>
+</div>
+
+</div>
+
+
+
+
+<div class='row'>
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/gateau_4.png'%}">
+    <div class="box-element product">
+        <h6><strong>Name</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>7€</strong></h4>
+    </div>
+</div>
+
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/gateau_5.png'%}">
+    <div class="box-element product">
+        <h6><strong>Name</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>7€</strong></h4>
+    </div>
+</div>
+
+<div class="col-lg-4">
+    <img class="thumbnail" src="{%static 'images/gateau_6.png'%}">
+    <div class="box-element product">
+        <h6><strong>Name</strong></h6>
+        <hr>
+
+        <button  class="btn btn-outline-secondary add-btn">Ajouter au panier</button>
+        <a class="btn btn-outline-success" href="#">Voir l'article</a>
+        <h4 style="display: inline-block; float: right"><strong>8,50€</strong></h4>
+    </div>
+</div> {% endcomment %}
